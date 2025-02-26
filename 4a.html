@@ -1,0 +1,84 @@
+<html>
+<head>
+    <title>CSS Selectors</title>
+    <style>
+        /* General Styling */
+        body { font-family: Arial, sans-serif; margin: 20px; }
+        .container { display: flex; flex-wrap: wrap; gap: 15px; }
+        .box { width: 45%; padding: 10px; border: 2px solid black; border-radius: 5px; background: #f9f9f9; }
+
+        /* i. Simple Selectors */
+        p { color: blue; }  
+        #unique { color: red; font-weight: bold; }  
+        .highlight { background: yellow; }  
+        h3, h4 { color: green; }  
+
+        /* ii. Combinator Selectors */
+        .parent div { color: purple; }  
+        .parent > p { color: orange; }  
+        .parent + p { font-style: italic; }  
+        .parent ~ p { text-decoration: underline; }  
+
+        /* iii. Pseudo-Class Selectors */
+        a:hover{background-color:skyblue} 
+        a:visited { color: purple; }  
+
+        /* iv. Pseudo-Element Selectors */
+        p::first-letter { font-size: 1.5em; color: red; }  
+        p::selection { background: yellow; color: black; }  
+
+        /* v. Attribute Selectors */  
+        input[type="email"] { background: lightgray; } 
+        input[type="password"] { background:skyblue; } 
+    </style>
+</head>
+<body>
+
+    <h2>CSS Selectors</h2>
+
+    <div class="container">
+        <div class="box">
+            <h3>Simple Selectors</h3>
+            <hr>
+            <p>Basic paragraph.</p>
+            <p id="unique">Unique ID applied.</p>
+            <p class="highlight">Highlighted text.</p>
+        </div>
+
+        <!-- Combinator Selectors -->
+        <div class="box">
+            <h3>Combinator Selectors</h3>
+            <hr>
+            <div class="parent">
+                <p>Direct child</p>
+                <div>Nested div</div>
+            </div>
+            <p>Next to parent</p>
+            <p>Following parent</p>
+        </div>
+
+        <!-- Pseudo-Class Selectors -->
+        <div class="box">
+            <h3>Pseudo-Class Selectors</h3>
+            <hr>
+            <a href="https://www.google.com" target="_blank">Visit google</a>
+        </div>
+
+        <!-- Pseudo-Element Selectors -->
+        <div class="box">
+            <h3>Pseudo-Element Selectors</h3>
+            <hr>
+            <p>Styled letter effect.</p>
+        </div>
+
+        <!-- Attribute Selectors -->
+        <div class="box">
+            <h3>Attribute Selectors</h3>
+            <hr>
+            <input type="email" placeholder="Email"><br>
+            <input type="password" placeholder="password">
+        </div>
+    </div>
+
+</body>
+</html>
